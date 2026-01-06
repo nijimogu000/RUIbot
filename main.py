@@ -38,13 +38,13 @@ both_responses = [
 ]
 
 def choose_response(candidates):
-global last_response_text
-filtered = [r for r in candidates if r != last_response_text]
-if not filtered:
-filtered = candidates
-choice = random.choice(filtered)
-last_response_text = choice
-return choice
+    global last_response_text
+    filtered = [r for r in candidates if r != last_response_text]
+    if not filtered:
+        filtered = candidates
+    choice = random.choice(filtered)
+    last_response_text = choice
+    return choice
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -83,3 +83,4 @@ await bot.process_commands(message)
 DISCORD_TOKEN
 
 bot.run(os.getenv("DISCORD_TOKEN"))
+
