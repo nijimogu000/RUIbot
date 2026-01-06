@@ -81,4 +81,5 @@ await bot.process_commands(message)
 
 ```
 DISCORD_TOKEN
-bot.run("DISCORD_TOKEN")
+
+bot.run(os.getenv("DISCORD_TOKEN"))
